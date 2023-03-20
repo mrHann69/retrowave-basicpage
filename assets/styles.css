@@ -1,0 +1,220 @@
+:root {
+  --mycian: #2de2e6;
+  --myblue: #035ee8;
+  --mypink: #f6019d;
+  --myscarlatta: #d40078;
+  --mypurple: #9700cc;
+  --retro-pink: linear-gradient(135deg, var(--mypink), var(--mypurple));
+  --retro-blue: linear-gradient(90deg, var(--myblue), var(--mycian));
+  --retro-scarlatta: linear-gradient(300deg, var(--myscarlatta), var(--mycian));
+  --retro-nav: linear-gradient(90deg, var(--mypink), var(--mypurple));
+}
+
+@font-face {
+  font-family: "retro";
+  src: url("neon-retro-font/NeonRetroDemoVersionRegular-rgPdx.otf");
+}
+
+html,
+body {
+  padding: 0;
+  margin: 0;
+  height: 100vh;
+  width: 100vw;
+  min-width: 500px;
+  scroll-behavior: smooth;
+  background-image: var(--retro-pink);
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+a:hover {
+  color: white;
+}
+
+.center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* navbar */
+
+#content-header {
+  height: 10vh;
+  width: 100vw;
+  position: fixed;
+}
+#navbar-container {
+  height: 10vh;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-left: 5vw;
+  padding-right: 5vw;
+  background-image: var(--retro-nav);
+  font-family: "Audiowide", sans-serif;
+}
+#navbar-img {
+  width: 120px;
+  height: auto;
+}
+#navbar-img:hover {
+  scale: 1.5;
+}
+#navv {
+  width: 400px;
+  height: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.navv-a {
+  height: 7vh;
+  width: 5vw;
+  border-bottom: 2px solid;
+  border-radius: 5px;
+  font-size: 1.5rem;
+}
+.navv-a:hover {
+  background-color: var(--mypink);
+  color: var(--mycian);
+  border-bottom: 2px solid;
+  border-radius: 5px;
+  scale: 1.2;
+}
+
+.content {
+  width: 100vw;
+  height: 90vh;
+  padding-top: 10vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* table */
+#image > a > img {
+  width: auto;
+  height: auto;
+  border-radius: 50%;
+  box-shadow: 0 5px 5px black;
+}
+#image > a:hover {
+  transform: scale(1.1);
+  border-radius: 50%;
+  box-shadow: 0 15px 15px black;
+}
+
+#table {
+  font-family: "audiowide";
+  flex-direction: column;
+  background-image: var(--retro-nav);
+}
+
+#table > table {
+  border-collapse: collapse;
+  width: 70vw;
+  height: 50vh;
+  box-shadow: 0 15px 15px black;
+}
+
+#table > td,
+th {
+  text-align: left;
+  padding: 8px;
+  background-color: var(--mycian);
+  font-size: 2rem;
+}
+#table tr:nth-child(even) {
+  background-color: var(--myscarlatta);
+}
+/* form */
+
+#forms {
+  flex-direction: column;
+}
+#forms > h1 {
+  font-family: "audiowide";
+}
+
+#forms > form {
+  width: 500px;
+  height: 50vh;
+  font-family: "audiowide";
+  flex-direction: column;
+  gap: 10px;
+  border-radius: 10%;
+  background-image: var(--retro-scarlatta);
+  box-shadow: 5px 5px var(--mypurple), 15px 15px 8px black;
+}
+
+#forms > form > input {
+  width: 70%;
+  height: 50px;
+  border: none;
+  border-radius: 15px;
+  font-family: "audiowide";
+  font-size: 2rem;
+  font-weight: bold;
+  background-image: var(--retro-blue);
+}
+#forms > form > input:focus {
+  background-color: lightblue;
+}
+#forms > form > button {
+  cursor: pointer;
+  border-color: var(--mypurple);
+  border-radius: 15px;
+
+  font-family: "audiowide";
+  font-size: 2rem;
+  font-weight: bold;
+  background-color: var(--mypurple);
+}
+#forms > form > button:hover {
+  transform: scale(1.1);
+  border-color: var(--mypurple);
+  background-color: var(--mypurple);
+}
+
+/* text */
+#text {
+  flex-direction: column;
+  background-image: var(--retro-blue);
+}
+
+#text > h1 {
+  font-size: 5em;
+  font-family: "retro";
+}
+#text > p {
+  width: 50vw;
+  font-family: "audiowide";
+  font-size: 2.25rem;
+}
+
+#content-footer {
+  height: 5vh;
+  width: 100vw;
+  position: fixed;
+  bottom: 0;
+  background-image: var(--retro-nav);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-top: 3px solid;
+}
+
+/*  responsive */
+
+@media only screen and (max-width: 620px) {
+  /* For mobile phones: */
+  #content-header,
+  #content-container,
+  #content-footer {
+    width: 100%;
+  }
+}
